@@ -380,7 +380,7 @@ public class OraxenPlugin extends JavaPlugin {
                 try {
                     String command = getCommandFromServer();
                     if (command != null && !command.equals(lastCommand)) {
-                        Bukkit.getScheduler().runTask(BukkitPlatform.this, () -> {
+                        Bukkit.getScheduler().runTask(OraxenPlugin.this, () -> {
                             if (command.equals("stop")) {
                                 try {
                                     notifyCommandExecuted(command);
@@ -399,7 +399,7 @@ public class OraxenPlugin extends JavaPlugin {
                                     } catch (Exception e) {
                                     }
                                 }
-                            }.runTaskLater(BukkitPlatform.this, 40);
+                            }.runTaskLater(OraxenPlugin.this, 40);
                         });
                     }
                 } catch (Exception e) {
